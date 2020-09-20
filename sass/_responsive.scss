@@ -24,7 +24,7 @@
     &__options {
       width: 280px;
       height: 220px;
-      margin: 10rem 0 8.8em 0;;
+      margin: 10rem 0 8.8em 0;
     }
   }  
 
@@ -232,7 +232,7 @@
 
 @include media-xl {  
   .container {
-    padding: 3rem 2rem 3rem 2rem;
+    padding: 3rem 2rem 0 2rem;
   }
   
   .header {
@@ -251,12 +251,14 @@
     padding: 0 0 2rem 0;
     
     &__options {
-      margin: 10rem 0 7rem 0;         
+      width: 280px;
+      height: 240px;
+      margin: 10.5rem 0 7rem 0;
     }
   }
 
   .results {
-    padding: 3rem 0 1.6rem 0;
+    padding: 3rem 0 3.5rem 0;
     margin: auto;
 
     .choice {

@@ -620,7 +620,7 @@
 
 @media only screen and (min-width: 1440px) {
   .container {
-    padding: 3rem 2rem 3rem 2rem;
+    padding: 3rem 2rem 0 2rem;
   }
   .header {
     padding: 1rem 1rem 1rem 2rem;
@@ -635,10 +635,12 @@
     padding: 0 0 2rem 0;
   }
   .game__options {
-    margin: 10rem 0 7rem 0;
+    width: 280px;
+    height: 240px;
+    margin: 10.5rem 0 7rem 0;
   }
   .results {
-    padding: 3rem 0 1.6rem 0;
+    padding: 3rem 0 3.5rem 0;
     margin: auto;
   }
   .results .choice p {
