@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
 .container {
   width: 100%;
-  background: radial-gradient(#1f3756, #141539);
+  background: repeating-linear-gradient(to bottom left, #1f3756, #141539);
   padding: 1.8rem 1.8rem;
 }
 

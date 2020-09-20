@@ -8,7 +8,7 @@ $Cyan: linear-gradient(#40b9ce, #52bed1);
 $Dark-Text: #3b4363;
 $Score-Text: #2a46c0;
 $Header-Outline: #606e85;
-$Radial-Gradient: radial-gradient(#1f3756, #141539);
+$Radial-Gradient: repeating-linear-gradient(to bottom left, #1f3756, #141539);
 
 @mixin media-md {
  @media only screen and (min-width: 768px) {
