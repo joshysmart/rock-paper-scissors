@@ -1,0 +1,132 @@
+.rules-modal {
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ top: 0;
+ right: 0;
+ background: #fff;
+ text-align: center;
+ text-transform: uppercase;
+ transition: all .4s ease-in;
+ z-index: 3;
+
+ h2 {
+  color: $Dark-Text;
+  font-size: 2rem;
+  margin: 5.8rem 0;
+  margin-bottom: calc(50% - 2rem);
+ }
+
+ &__options {
+  width: 200px;
+  height: 170px;
+  margin: 0 auto;
+  position: relative;
+
+  .option {
+   width: 110px;
+   height: 110px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   background: #e1e4ed;
+   border: .8rem solid #b6b9ca;
+   border-radius: 50%;
+
+   .icon {
+    fill: #8a8fac;
+   }
+  }
+
+  .option-rock{
+   position: absolute;
+   bottom: -55px;
+   right: calc(50% - 55px);
+  }
+
+  .option-paper {
+   position: absolute;
+   top: -55px;
+   left: -55px;
+  }
+
+  .option-scissors {
+   position: absolute;
+   top: -55px;
+   right: -55px;
+  }
+
+  .arrow {
+   width: 40px;
+   height: 4px;
+   background: #b6b9ca;
+   position: absolute;
+
+   &::before {
+    position: absolute;
+    content: 'BEATS';
+    top: -2rem;
+    right: 1px;
+    color: #b6b9ca;
+   }
+
+   &::after {
+    position: absolute;
+    content: '';
+    top: -4px;
+    right: 27px;
+    border: solid #b6b9ca;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;  
+    transform: rotate(135deg); 
+   }
+  }
+
+  .arrow1 {
+   right: calc(50% - 20px);
+  }
+
+  .arrow2 {
+   bottom: calc(50% - 10px);
+   left: calc(20px);
+   transform: rotate(-135deg); 
+
+   &::before {
+   transform: rotate(135deg); 
+   top: -3.5rem;
+   left: 3.5rem;
+   }
+  }
+
+  .arrow3 {
+   bottom: calc(50% - 10px);
+   right: calc(20px);
+   transform: rotate(135deg); 
+
+   &::before {
+   transform: rotate(-135deg); 
+   top: -2.5rem;
+   right: 2rem;
+   }
+  }
+ }
+
+ .rules-close {
+  position: absolute;
+  bottom: 4rem;
+  right: calc(50% - 10px); 
+  transition: all .4s ease-in;
+ 
+  &:hover {
+   .close-icon {
+    fill: #740505;
+   }
+  }
+ }
+}
+
+.display-modal {
+ transform: scale(0);
+}
+

@@ -1,0 +1,274 @@
+@include media-md {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem 0 2rem;
+  }
+
+  .main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header {
+    width: 70%;
+  }  
+  
+  .game {
+    width: 100%;
+    &__options {
+      width: 280px;
+      height: 220px;
+      margin: 10rem 0 8.8em 0;;
+    }
+  }  
+
+  .rules-modal {
+    width: 400px;
+    height: 420px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: calc(50% - 210px);
+    right: auto;
+    text-align: left;
+    border-radius: .7rem;
+    
+    .rules {
+      width: 85%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 0 0 0;
+      margin-bottom: 6rem;
+    }
+    
+    h2 {
+      margin: 0;
+      font-size: 2rem;
+    }
+  
+    &__options {
+      width: 200px;
+      height: 170px;
+      margin: 0 auto;
+      position: relative;
+      
+    }
+
+    .rules-close {
+    position: static;
+    }
+
+  }  
+}
+
+@include media-lg {
+  .container {
+    padding: 2rem 2rem 0 2rem;
+  }
+
+  .header {
+    width: 55%;
+    padding: .8rem .8rem .8rem 1.5rem;
+    border-radius: 1rem;
+    
+    .logo {
+      width: 8rem;
+    }
+  
+    .score {
+      padding: .6rem 2.5rem;
+      border-radius: 10px;
+      
+      p {
+        margin-top: 7px;
+        font-size: 1rem;
+      }
+      
+      h3 {
+        font-size: 4rem;
+      }
+    }
+  }
+  
+  .game {
+    padding: 0 0 5rem 0;
+    
+    &__options {
+      margin: 8rem 0 0 0;
+          
+      .option {
+        width: 200px;
+        height: 200px;        
+      }
+      img {
+        width: 70px;
+      } 
+      
+      .option-rock{
+        bottom: -100px;
+        right: calc(50% - 100px);
+      }
+      
+      .rock-clicked {
+        bottom: -103px;
+        box-shadow: 0px 7px 0px -1px #991635;
+        
+        &::before {
+          box-shadow: inset 0px 5px 0px #b9bed2;
+        }
+      }
+
+      .option-paper {
+        top: -100px;
+        left: -100px;
+      }
+
+      .paper-clicked {
+        top: -97px;
+        box-shadow: 0px 7px 0px -1px #2642bf;
+        
+        &::before {
+          box-shadow: inset 0px 5px 0px #b9bed2;
+        }
+      }
+
+      .option-scissors {
+        top: -100px;
+        right: -100px;
+      }
+
+      .scissors-clicked {
+        top: -97px;
+        box-shadow: 0px 7px 0px -1px #cc6d1b;
+      
+        &::before {
+          box-shadow: inset 0px 5px 0px #b9bed2;
+        }
+      }    
+    }
+
+    .rules {
+      align-self: flex-end;
+      margin: 0 0 0 0;
+      z-index: 1;
+    }    
+  }
+  
+  .results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0 0 0;
+    margin-bottom: -2.5rem;
+  
+    .choice {
+      flex-direction: column;
+
+      p {
+        padding-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+      
+      .clicked-option {
+        height: 280px;
+        width: 280px;
+  
+        &::before {
+          box-shadow: inset 0px 12px 0px #b9bed2;
+        }
+
+        img {
+          width: 100px;
+        }
+      }
+        
+      .animate {
+        @keyframes blink {
+          99% {
+            box-shadow: 
+            0 0 0 70px #2d3c5b,
+            0 0 0 140px #273856,
+            0 0 5px 200px #223150
+          ;}
+        }
+      }
+        
+      .option-rock {
+        &:after {
+          box-shadow: 0px 15px 0px -1px #991635;
+        } 
+      }
+
+      .option-paper {
+        &:after {
+          box-shadow: 0px 15px 0px -1px #2642bf;
+        } 
+      }
+      
+      .option-scissors {
+        &:after {
+          box-shadow: 0px 15px 0px -1px #cc6d1b;
+        } 
+      }
+    }
+      
+    .result {
+      margin: 0 2rem;
+      .play-again {
+        padding: 1rem 3.6rem;
+      }
+    }
+  }
+}
+  
+
+@include media-xl {  
+  .container {
+    width: 95%;
+    padding: 3rem 2rem 0 2rem;
+  }
+  
+  .header {
+    padding: 1rem 1rem 1rem 2rem;
+    
+    .logo {
+      width: 10rem;
+    }
+    
+    .score {
+      padding: .8rem 3rem;      
+    }
+  }
+  
+  .game {
+    padding: 0 0 2rem 0;
+    
+    &__options {
+      margin: 10rem 0 7rem 0;         
+    }
+  }
+
+  .results {
+    padding: 3rem 0 1.6rem 0;
+    margin: auto;
+
+    .choice {
+      p {
+        padding-bottom: 2.5rem;
+      }
+
+      .clicked-option {
+        width: 300px;
+        height: 300px;        
+      }      
+    }
+  }  
+}

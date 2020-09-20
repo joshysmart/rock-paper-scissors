@@ -1,0 +1,139 @@
+.results {
+ width: 100%;
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ grid-template-rows: auto;
+ grid-template-areas: 
+    "left right"
+    "bottom bottom";
+ grid-gap: 4rem 2rem;
+ position: relative;
+ padding: 6rem 0;
+ padding-bottom: 3rem;
+
+ .choice {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+
+  p {
+   color: #fff;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   z-index: 2;
+  }
+  
+  .clicked-option {
+   width: 120px;
+   height: 120px;
+   border-radius: 50%;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   z-index: 0;
+
+   &::before {
+    width: 75%;
+    height: 75%;
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: #e1e4ed;
+    box-shadow: inset 0px 8px 0px #b9bed2;
+    z-index: -1;
+   }
+
+   &:after {
+      width: 100%;
+      height: 100%;
+      content: '';
+      position: absolute;
+      border-radius: 50%; 
+      z-index: -2;
+     }
+  }
+
+  .animate {
+   animation: blink 2s infinite;
+
+   @keyframes blink {
+   90% {
+   box-shadow: 0 0 0 30px #2d3c5b,
+               0 0 0 60px #273856,
+               0 0 0 90px #223555
+   ;}
+   } 
+  }
+
+  .option-rock {
+   background-image: $Rock-Gradient;
+   &:after {
+     box-shadow: 0px 8px 0px -1px #991635;
+   } 
+  }
+  .option-paper {
+   background-image: $Paper-Gradient;
+   &:after {
+      box-shadow: 0px 8px 0px -1px #2642bf;
+    } 
+  }
+  .option-scissors {
+   background-image: $Scissors-Gradient;
+   &:after {
+      box-shadow: 0px 8px 0px -1px #cc6d1b;
+   }  
+  }
+ }
+
+ .user-choice {
+  grid-area: left;
+ }
+ .comp-choice {
+  grid-area: right;
+ }
+
+ .result {
+  grid-area: bottom;
+  text-align: center;
+  z-index: 1;
+
+  h2 {
+   font-size: 3.5rem;
+   color: #fff;
+   margin: .8rem 0;
+   text-transform: uppercase;
+  }
+
+  .play-again {
+   text-transform: uppercase;
+   color: $Dark-Text;
+   background: #fff;
+   letter-spacing: 2px;
+   font-weight: 600;
+   padding: 1rem 3.8rem;
+   border-radius: 7px;
+   border: 0;
+   transition: all .2s ease-in;
+   cursor: url('../images/cursor.svg'), auto;
+
+   &:hover {
+    color: #dc2e4e;
+   }
+
+   &:active {
+    transform: scale(.99);
+   }
+  }
+ }
+ transition: all .3s ease-in;
+}
+.display {
+   display: none;
+}
+
+.fade {
+   transform: scale(.8);
+   opacity: 0;
+}

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+$Scissors-Gradient: linear-gradient(#ec9e0e, #eca922);
+$Paper-Gradient: linear-gradient(#4865f4, #5671f5);
+$Rock-Gradient: linear-gradient(#dc2e4e, #dd405d);
+$Lizard-Gradient: linear-gradient(#834fe3, #8c5de5);
+$Cyan: linear-gradient(#40b9ce, #52bed1);
+$Dark-Text: #3b4363;
+$Score-Text: #2a46c0;
+$Header-Outline: #606e85;
+$Radial-Gradient: radial-gradient(#1f3756, #141539);
+
+@mixin media-md {
+ @media only screen and (min-width: 768px) {
+  @content;
+ }
+}
+
+@mixin media-lg {
+ @media only screen and (min-width: 1280px) {
+  @content;
+ }
+}
+
+@mixin media-xl {
+ @media only screen and (min-width: 1440px) {
+  @content;
+ }
+}

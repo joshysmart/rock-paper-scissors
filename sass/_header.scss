@@ -1,0 +1,40 @@
+.header {
+ padding: .7rem .7rem .7rem 1.3rem;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ border: 3px solid #606e85;
+ border-radius: 7px;
+ z-index: 2;
+
+ .logo {
+  width: 5.2rem;
+  margin-top: 5px;
+  
+  img {
+   width: 100%;
+  }
+ }
+
+ .score {
+  text-align: center;
+  background: #fff;
+  padding: .5rem 1.3rem;
+  border-radius: 4px;
+
+  p {
+   text-transform: uppercase;
+   margin: 0;
+   font-size: .7rem;
+   color: $Score-Text;
+   letter-spacing: 1px;
+  }
+
+  h3 {
+   margin: 0;
+   margin-top: -5px;
+   font-size: 2.5rem;
+   color: #3B4262;
+  }
+ }
+}
