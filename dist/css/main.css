@@ -620,8 +620,7 @@
 
 @media only screen and (min-width: 1440px) {
   .container {
-    width: 95%;
-    padding: 3rem 2rem 0 2rem;
+    padding: 3rem 2rem 3rem 2rem;
   }
   .header {
     padding: 1rem 1rem 1rem 2rem;
